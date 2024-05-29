@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins","sans-serif";
+}
+
+body{
+    font-family: "Montserrat" , sans-serif;   
+}
+
+
+section{
+    padding: 100px 0;
+}
+
+.section_title{
+    margin-bottom: 30px;
+}
+
+.section_title h2{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.section_title h2:hover{
+    background-color: antiquewhite;
+}
+
+/*HEADER*/
+
+header{
+    background: rgb(1, 0, 19);
+    border-bottom: 1px solid rgba(2, 4, 78, 0.001);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Sayfa genişliğinin yüzde 80'i kadar genişlik */
+    margin: 0 auto; /* Merkezi hizalama */
+    padding: 10px 0;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_links li {
+    margin-left: 15px;
+}
+
+.nav_links li a {
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav_links li a:hover {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff; 
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav_links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        backdrop-filter: blur(40px);
+        z-index: 1000;
+        color: black;
+        height: 60px;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .nav_links.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.logo img{
+
+    width: 100px; /* Örnek bir genişlik */
+    height: 33px; /* Otomatik yükseklik ayarlaması */
+    
+}
+
+.navbarjs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*LOGIN*/
+
+.login {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("mudekbackground.jpg") no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+.wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    border-radius: 40px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    text-align: center;
+    font-size: 26px;
+}
+
+.login .wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.wrapper .input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    transform: translateY(-180%);
+    font-size: 20px;
+}
+ 
+
+.wrapper .btn{
+    width:  100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 0 10px (0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+
+.choicebar .btn{
+    width:  100%;
+    height: 45px;
+    border-radius: 40px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+    border: 2px solid rgba(255,255,255, .2);
+}
+
+.choicebar .btn:hover{
+    background-color: rgb(10, 7, 36);
+    color: rgb(252, 252, 252);
+}
+
+.geributtoncont{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.geributton{
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+
+.geributton:hover{
+    color: rgb(0, 0, 0);
+}
+
+/*HAKKIMIZDA*/
+
+.hakkimizda{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(background2.jpg) no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+
+.bizkimiz{
+    margin-left: 10vh;
+    margin-right: 10vh;
+    font-size: large;
+    font: bold;
+}
+
+.bizkimiz ul li{
+    list-style: circle;
+}
+
+/*İLETİSİM*/
+.contact{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(background2.jpg) no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+.contact-section{
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-section input,
+.contact-section textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.social-media .whatsapp {
+    background-color: #25D366;
+    transition: all .5s ease-in-out;
+}
+
+.social-media .facebook {
+    background-color: #3b5998;
+    transition: all .5s ease-in-out;
+
+}
+
+.social-media a i {
+    margin-right: 8px;
+}
+
+.social-media a:hover {
+    transform: scale(1.1); 
+}
